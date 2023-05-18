@@ -1,0 +1,99 @@
+
+
+.title
+{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+.to-do {
+  background-color: #f9efef;
+  width: 1000px;
+  height: 200px;
+  margin-right: 20px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.branch-title {
+  font-family: 'Roboto', sans-serif;
+  text-align: start;
+  padding: 10px;
+}
+
+.input {
+  width: 800px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border: none;
+  padding: 5px;
+}
+.input::placeholder {
+  opacity: 70%;
+}
+
+.input:hover,
+.input:focus {
+  outline-color: rgb(220, 220, 244);
+}
+
+.button{
+  width: 150px;
+  padding: 7px;
+  border: none;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+  cursor: pointer;
+}
+.button:hover,
+.button:active {
+  transform: scale(105%);
+}
+
+.to-do-list {
+  background-color: #f9efef;
+  width: 1000px;
+  min-height: 400px;
+  height: auto;
+  margin-right: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.second-title {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+}
+.checkbox {
+  position: absolute;
+  right: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+.remove {
+  position: absolute;
+  right: 50px;
+  border: none;
+  background-color: #1890ff;
+  color: white;
+  width: 80px;
+  height: 20px;
+  cursor: pointer;
+}
+.remove:hover,
+.remove:active {
+  transform: scale(105%);
+}
+.output {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 10px;
+}
+.input-list {
+  position: absolute;
+  right: 250px;
+}
+
+

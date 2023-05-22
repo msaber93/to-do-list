@@ -1,36 +1,47 @@
 import { Component } from '@angular/core';
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+// import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+
+// export interface Todo {
+//   id: string;
+//   name: string;
+//   isDone: boolean
+// }
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent  {
+
   title = 'to-do-project';
-  cricleplus = faCirclePlus;
-  todos: any[] = [];
+  // cricleplus = faCirclePlus;
+  // todos : Todo[] = this.localSotrage.getLocalStorage('todos') || [];
 
-  addTodo(task: any) {
-    this.todos.push({ id: this.uid(), name: task, isDone: false });
-    console.log(this.todos);
-  }
+  constructor() {}
 
-  uid() {
-    return Date.now().toString(36) + Math.random().toString(36).substr(2);
-  }
+  // addTodo(task: any): void {
+  //   this.todos.push({ id: this.uid(), name: task, isDone: false });
+  //   this.localSotrage.setLocalStorage('todos', this.todos);
+  // }
 
-  removeItem(id: number) {
-    this.todos = this.todos.filter((outPut) => outPut.id !== id);
-  }
+  // uid() {
+  //   return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  // }
 
-  updateValue(event: any, todoId: any) {
-    this.todos = this.todos.map(todo => {
-      if(todo.id === todoId) {
-        console.log(todoId)
-        todo.isDone = event.target.checked;
-      }
-      return todo
-    })
-  }
+  // removeItem(id: string) {
+  //   this.todos = this.todos.filter((todo) => todo.id !== id);
+  //   this.localSotrage.setLocalStorage('todos', this.todos);
+  // }
+
+  // updateValue(event: any, todoId: string) {
+  //   this.todos = this.todos.map(todo => {
+  //     if(todo.id === todoId) {
+  //       console.log(todoId)
+  //       todo.isDone = event.target.checked;
+  //     }
+  //     return todo
+  //   })
+  //   this.localSotrage.setLocalStorage('todos', this.todos);
+  // }
 }

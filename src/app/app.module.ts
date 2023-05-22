@@ -5,10 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LocalstorgeService } from './services/localstorge.service';
+import { TaskComponent } from './component/task/task/task.component';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LocalstorgeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

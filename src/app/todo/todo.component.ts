@@ -42,7 +42,6 @@ export class TodoComponent {
   updateValue(event: any, todoId: string) {
     this.todos = this.todos.map(todo => {
       if(todo.id === todoId) {
-        console.log(todoId)
         todo.isDone = event.target.checked;
       }
       return todo

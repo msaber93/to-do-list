@@ -1,2 +1,52 @@
-<h2>Task work</h2>
-<button (click)="backTodo()" routerLink="/todo">Back todo</button>
+
+
+<div class="container">
+  <form>
+    <label for="fname">Name:</label>
+    <input #name type="text" id="fname" name="fname">
+    <br>
+    <label for="time">Select time:</label>
+    <input #time type="time" id="ltime" name="time">
+    <br>
+    <label for="date">Select date:</label>
+    <input #date type="date" id="ldate" name="date">
+    <br>
+    <p><label for="text">Write your notes:</label></p>
+    <textarea #text name="notes" id="" cols="20" rows="5"></textarea>
+    <br>
+    <button (click)="addTask(name.value, time.value, date.value, text.value); name.value = ''; time.value=''; date.value=''; text.value=''" type="submit">Submit</button>
+  </form>
+  <br>
+  <div class="table">
+    <h3>Table:</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Notes</th>
+        <th>Remove Button</th>
+      </tr>
+      <tr *ngFor="let task of tasks">
+        <td>{{task.name}}</td>
+        <td>{{task.time}}</td>
+        <td>{{task.date}}</td>
+        <td>{{task.textarea}}</td>
+        <td>
+        <button (click)="removeTask(task.id)">Remove task</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button class="btn-2" (click)="backTodo()" routerLink="/todo">Back todo</button>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ ul {
   list-style: none;
   position: absolute;
   right: 350px;
+  top: 100px;
   z-index: 999;
 
 
@@ -40,7 +41,7 @@ li {
 
 .input {
   width: 800px;
-  height: 20px;
+  height: 30px;
   margin-left: 5px;
   margin-right: 10px;
   border: none;
@@ -57,7 +58,7 @@ li {
 
 .button{
   width: 150px;
-  padding: 7px;
+  padding: 5px;
   border: none;
   background-color: #1890ff;
   border-color: #1890ff;
@@ -72,7 +73,7 @@ li {
 .to-do-list {
   background-color: #f9efef;
   width: 1000px;
-  height: 200px;
+  height: 400px;
   margin-right: 20px;
   position: absolute;
   top: 60%;
@@ -84,6 +85,7 @@ li {
   font-family: 'Roboto', sans-serif;
   padding: 10px;
 }
+
 .checkbox {
   position: absolute;
   right: 150px;
@@ -96,7 +98,7 @@ li {
   background-color: #1890ff;
   color: white;
   width: 80px;
-  height: 20px;
+  height: 25px;
   cursor: pointer;
 }
 .remove:hover,
@@ -111,5 +113,3 @@ li {
   position: absolute;
   right: 250px;
 }
-
-

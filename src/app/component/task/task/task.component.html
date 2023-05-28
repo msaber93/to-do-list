@@ -1,20 +1,45 @@
 
 
 <div class="container">
-  <form>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="userData" class="formGroup">
     <label for="fname">Name:</label>
-    <input #name type="text" id="fname" name="fname">
+    <input
+    #name
+    type="text"
+    id="fname"
+    name="fname"
+    formControlName="name"
+    >
+    <span *ngIf="!taskForm.get('userData.name')?.valid && taskForm.get('userData.name')?.touched">Name required</span>
     <br>
-    <label for="time">Select time:</label>
-    <input #time type="time" id="ltime" name="time">
+    <label for="ltime">Select time:</label>
+    <input
+    #time
+    type="time"
+    id="ltime"
+    name="ltime"
+    formControlName="time"
+    >
+    <span *ngIf="!taskForm.get('userData.time')?.valid && taskForm.get('userData.time')?.touched">Time required</span>
     <br>
-    <label for="date">Select date:</label>
-    <input #date type="date" id="ldate" name="date">
+    <label for="ldate">Select date:</label>
+    <input
+    #date
+    type="date"
+    id="ldate"
+    name="date"
+    formControlName="date">
+    <span  *ngIf="taskForm.get('userData.date')?.invalid && taskForm.get('userData.date')?.touched">
+    <span *ngIf="taskForm.get('userData.date')?.hasError('required')" >Date required</span>
+    <span *ngIf="taskForm.get('userData.date')?.hasError('pastDate')">Selected date must be in the future.</span>
+    </span>
+    </div>
     <br>
     <p><label for="text">Write your notes:</label></p>
-    <textarea #text name="notes" id="" cols="20" rows="5"></textarea>
+    <textarea #text  name="notes" id="text" cols="20" rows="5"></textarea>
     <br>
-    <button (click)="addTask(name.value, time.value, date.value, text.value); name.value = ''; time.value=''; date.value=''; text.value=''" type="submit">Submit</button>
+    <button  (click)="addTask(name.value, time.value, date.value, text.value); name.value = ''; time.value=''; date.value=''; text.value=''" type="submit">Submit</button>
   </form>
   <br>
   <div class="table">

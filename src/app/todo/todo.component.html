@@ -11,6 +11,7 @@
     <input
       type="text"
       #task
+      id="todoTask"
       placeholder="what needs to be done?"
       class="input"
     />
@@ -25,11 +26,11 @@
       <hr />
       <table>
         <tr *ngFor="let todo of todos">
-          <td colspan="2" class="output">
+          <td colspan="2"  class="output">
             {{ todo.name }}
           </td>
           <td colspan="1">
-            <div class="">
+            <div>
               <label class="checkbox" for="done"> Update Value </label>
               <input
                 class="input-list"

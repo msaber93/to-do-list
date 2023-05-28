@@ -25,20 +25,28 @@ input:hover {
 }
 
 .btn-2 {
-  padding: 8px;
-  width: 80px;
+  padding: 5px;
+  width: 100px;
   border: none;
   background-color: #1890ff;
   border-radius: 4px;
   color: white;
   position: relative;
   top: 50%;
-  left: 48%;
+  left: 47%;
   cursor: pointer;
   margin-top: 15px;
+  cursor: pointer;
 }
 button {
   margin-top: 10px;
+  padding: 8px;
+  border: none;
+  background-color: #1890ff;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+
 }
 .table {
   font-family: 'Roboto', sans-serif;
@@ -46,13 +54,25 @@ button {
 }
 
 table, th, td {
-  border: 1px solid black;
-
+  border: 2px solid black;
   height: 30px;
 }
 th {
   width: 400px;
 }
-td {
+th,td {
   text-align: center;
+}
+
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form, .formGroup)  {
+  border-left: 5px solid #a94442;
+  border-radius: 2px;
+}
+span {
+  margin-left: 5px;
 }

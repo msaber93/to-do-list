@@ -1,9 +1,5 @@
 
 <div class="container">
-  <ul>
-    <li (click)="goTodo()"><a routerLink="/todo"></a>Todo</li>
-    <li (click)="goToTask()"><a routerLink="/task"></a>Task</li>
-  </ul>
   <h1 class="title">To do List</h1>
   <div class="to-do">
     <h3 class="branch-title">Create a new todo</h3>
@@ -18,18 +14,21 @@
     <button class="button" (click)="addTodo(task.value);task.value=''" type="button">
       <fa-icon [icon]="cricleplus"></fa-icon> Add todo
     </button>
-  </div>
 
-  <div class="content">
     <div class="to-do-list">
       <h3 class="second-title">Todo List</h3>
       <hr />
       <table>
+        <tr>
+          <th>Name</th>
+          <th>Update Value</th>
+          <th>Remove Button</th>
+        </tr>
         <tr *ngFor="let todo of todos">
-          <td colspan="2"  class="output">
+          <td colspan="1"  class="output">
             {{ todo.name }}
           </td>
-          <td colspan="1">
+          <td>
             <div>
               <label class="checkbox" for="done"> Update Value </label>
               <input
@@ -55,6 +54,6 @@
       </table>
     </div>
   </div>
-</div>
+  </div>
 
 

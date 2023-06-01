@@ -1,0 +1,21 @@
+<div class="table">
+  <h3>Table:</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Notes</th>
+      <th>Remove Button</th>
+    </tr>
+    <tr *ngFor="let task of this.taskSharedService.tasks">
+      <td>{{task.name}}</td>
+      <td>{{task.time}}</td>
+      <td>{{task.date}}</td>
+      <td>{{task.textarea}}</td>
+      <td>
+      <button (click)="removeTask(task.id)">Remove task</button>
+      </td>
+    </tr>
+  </table>
+</div>

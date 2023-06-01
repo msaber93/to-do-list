@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../todo/todo.component';
-import { Task } from '../component/task/task/task.component';
+import { Task } from '../task/task-shared.service';
 
 @Injectable({
   providedIn: 'root'

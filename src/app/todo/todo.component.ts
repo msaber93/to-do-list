@@ -49,11 +49,4 @@ export class TodoComponent {
     this.localSotrage.setLocalStorage('todos', this.todos);
   }
 
-  goTodo() {
-    this.routerTodo.navigate(['/todo']);
-  }
-
-  goToTask() {
-    this.routerTodo.navigate(['/task']);
-  }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { TaskModule } from './task/task.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,19 +9,25 @@ import { LocalstorgeService } from './services/localstorge.service';
 import { TaskComponent } from './component/task/task/task.component';
 import { TodoComponent } from './todo/todo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     TodoComponent,
+    NavbarComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     NgbModule,
-    ReactiveFormsModule
+    TaskModule
   ],
   providers: [LocalstorgeService],
   bootstrap: [AppComponent]

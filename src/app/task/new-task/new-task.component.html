@@ -1,7 +1,5 @@
-
-
-<!-- <div class="container"> -->
-  <!-- <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+<div class="container">
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
     <div formGroupName="userData" class="formGroup">
     <label for="fname">Name:</label>
     <input
@@ -40,38 +38,5 @@
     <textarea #text  name="notes" id="text" cols="20" rows="5"></textarea>
     <br>
     <button [disabled]="taskForm.invalid"   (click)="addTask(name.value, time.value, date.value, text.value); name.value = ''; time.value=''; date.value=''; text.value=''" type="submit">Submit</button>
-  </form> -->
-  <!-- <br> -->
-  <!-- <div class="table">
-    <h3>Table:</h3>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Time</th>
-        <th>Date</th>
-        <th>Notes</th>
-        <th>Remove Button</th>
-      </tr>
-      <tr *ngFor="let task of tasks">
-        <td>{{task.name}}</td>
-        <td>{{task.time}}</td>
-        <td>{{task.date}}</td>
-        <td>{{task.textarea}}</td>
-        <td>
-        <button (click)="removeTask(task.id)">Remove task</button>
-        </td>
-      </tr>
-    </table>
-  </div> -->
-  <!-- <button class="btn-2" (click)="backTodo()" routerLink="/todo">Back todo</button> -->
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
+  </form>
+</div>

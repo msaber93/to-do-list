@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { TaskComponent } from './component/task/task/task.component';
 import { TodoComponent } from './todo/todo.component';
+import { NewTaskComponent } from './task/new-task/new-task.component';
+import { TableTasksComponent } from './task/table-tasks/table-tasks.component';
+import { DetailesComponent } from './task/detailes/detailes.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
-  {path: 'todo', component: TodoComponent},
-  {path: 'task', component: TaskComponent},
   {path: '', redirectTo: '/todo', pathMatch: 'full'},
+  {path: 'todo', component: TodoComponent},
+  {path: 'new-task', component: NewTaskComponent},
+  {path: 'table-task', component: TableTasksComponent},
+  {path: 'detailes', component: DetailesComponent},
+  {path: '**', component: PagenotfoundComponent},
 ];
 
 @NgModule({

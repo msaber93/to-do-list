@@ -1,35 +1,17 @@
-ul {
-  list-style: none;
-  position: absolute;
-  right: 350px;
-  top: 100px;
-  z-index: 999;
 
-
-}
-li {
-  display: inline;
-  margin-left: 20px;
-  background-color: #1890ff;
-  padding: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-
-}
 .title
 {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin: 20px;
 }
 .to-do {
   background-color: #f9efef;
   width: 1000px;
-  height: 200px;
+  height: 400px;
   margin-right: 20px;
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -37,6 +19,21 @@ li {
   font-family: 'Roboto', sans-serif;
   text-align: start;
   padding: 10px;
+}
+table {
+  position: relative;
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+}
+table, th, td {
+  border: 2px solid black;
+  height: 30px;
+}
+th {
+  width: 400px;
+}
+th,td {
+  text-align: center;
+  color: black;
 }
 
 .input {
@@ -64,42 +61,29 @@ li {
   border-color: #1890ff;
   color: white;
   cursor: pointer;
+  border-radius: 4px;
 }
 .button:hover,
 .button:active {
   transform: scale(105%);
 }
 
-.to-do-list {
-  background-color: #f9efef;
-  width: 1000px;
-  height: 400px;
-  margin-right: 20px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-}
 .second-title {
   font-family: 'Roboto', sans-serif;
   padding: 10px;
 }
 
 .checkbox {
-  position: absolute;
-  right: 150px;
   font-family: 'Roboto', sans-serif;
 }
 .remove {
-  position: absolute;
-  right: 50px;
   border: none;
   background-color: #1890ff;
   color: white;
   width: 80px;
   height: 25px;
   cursor: pointer;
+  border-radius: 4px;
 }
 .remove:hover,
 .remove:active {
@@ -111,5 +95,5 @@ li {
 }
 .input-list {
   position: absolute;
-  right: 250px;
+  left: 420px;
 }

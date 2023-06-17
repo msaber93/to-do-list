@@ -1,1 +1,8 @@
-<p>detailes works!</p>
+<div class="container">
+  <div class="card">
+    <h2>{{this.task?.name}}</h2>
+    <p>{{this.task?.time}}</p>
+    <p>{{this.task?.date| date: 'dd/MM/yyyy'}}</p>
+    <p>{{this.task?.textarea}}</p>
+  </div>
+</div>

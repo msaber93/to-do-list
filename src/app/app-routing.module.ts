@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'todo', component: TodoComponent},
   {path: 'new-task', component: NewTaskComponent},
   {path: 'table-task', component: TableTasksComponent},
-  {path: 'detailes', component: DetailesComponent},
+  {path: 'task/:id', component: DetailesComponent},
   {path: '**', component: PagenotfoundComponent},
 ];
 

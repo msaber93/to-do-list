@@ -7,7 +7,7 @@
     <input
       type="text"
       #task
-      id="todoTask"
+      id="first-name"
       placeholder="what needs to be done?"
       class="input"
     />
@@ -15,45 +15,25 @@
       <fa-icon [icon]="cricleplus"></fa-icon> Add todo
     </button>
 
-    <div class="to-do-list">
-      <h3 class="second-title">Todo List</h3>
-      <hr />
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Update Value</th>
-          <th>Remove Button</th>
-        </tr>
-        <tr *ngFor="let todo of todos">
-          <td colspan="1"  class="output">
-            {{ todo.name }}
-          </td>
-          <td>
-            <div>
-              <label class="checkbox" for="done"> Update Value </label>
-              <input
-                class="input-list"
-                type="checkbox"
-                id="done"
-                [checked]="todo.isDone"
-                aria-label="checkbox"
-                (change)="updateValue($event, todo.id)"
-              />
-            </div>
-          </td>
-          <td>
-            <button
-              class="remove"
-              type="button"
-              (click)="removeItem(todo.id)"
-            >
-              Remove
-            </button>
-          </td>
-        </tr>
-      </table>
+
+    <div class="card">
+      <div class="card-content" *ngFor="let todo of todos">
+        <h3>{{todo.name}}</h3>
+        <div class="value">
+          <label for="last-name"> Update Value </label>
+          <input
+            class="input-list"
+            type="checkbox"
+            id="last-name"
+            [checked]="todo.isDone"
+            aria-label="checkbox"
+            (change)="updateValue($event, todo.id)"
+          />
+        </div>
+        <a href="#" class="btn" (click)="removeItem(todo.id)">Remove Task</a>
+      </div>
     </div>
   </div>
-  </div>
+</div>
 
 

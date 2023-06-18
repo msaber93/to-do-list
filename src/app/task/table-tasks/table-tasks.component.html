@@ -1,21 +1,39 @@
-<div class="table">
-  <h3>Table:</h3>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Time</th>
-      <th>Date</th>
-      <th>Notes</th>
-      <th>Remove Button</th>
-    </tr>
-    <tr *ngFor="let task of this.taskSharedService.tasks">
-      <td>{{task.name}}</td>
-      <td>{{task.time}}</td>
-      <td>{{task.date}}</td>
-      <td>{{task.textarea}}</td>
-      <td>
-      <button (click)="removeTask(task.id)">Remove task</button>
-      </td>
-    </tr>
-  </table>
+<div class="container">
+  <div class="card" *ngFor="let task of this.taskSharedService.tasks">
+    <h2>{{task.name}}</h2>
+    <p>{{task.time}}</p>
+    <p>{{task.date | date: 'dd/MM/yyyy' }}</p>
+    <p>{{task.textarea}}</p>
+    <button  (click)="removeTask(task.id)" class="remove-button">Remove</button>
+    <button  (click)="openDetailes(task.id)" class="details-button">Details</button>
+  </div>
+  
+
+
+
+  <!-- <div class="table">
+    <h3>Table:</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Notes</th>
+        <th>Remove Button</th>
+        <th>Detailes</th>
+      </tr>
+      <tr *ngFor="let task of this.taskSharedService.tasks">
+        <td>{{task.name}}</td>
+        <td>{{task.time}}</td>
+        <td>{{task.date | date: 'dd/MM/yyyy'}}</td>
+        <td>{{task.textarea}}</td>
+        <td>
+        <button (click)="removeTask(task.id)">Remove task</button>
+        </td>
+        <td>
+          <button (click)="openDetailes(task.id)">Detailes</button>
+        </td>
+      </tr>
+    </table>
+  </div>   -->
 </div>

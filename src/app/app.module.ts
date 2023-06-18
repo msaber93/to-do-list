@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocalstorgeService } from './services/localstorge.service';
-import { TaskComponent } from './component/task/task/task.component';
 import { TodoComponent } from './todo/todo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,7 +16,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent,
     TodoComponent,
     NavbarComponent,
     PagenotfoundComponent

@@ -1,27 +1,59 @@
-.table {
-  font-family: 'Roboto', sans-serif;
-  margin-left: 10px;
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-table, th, td {
-  border: 2px solid black;
-  height: 30px;
-}
-th {
-  width: 400px;
-}
-th,td {
+.card h2 {
+  margin-top: 0;
   text-align: center;
 }
 
-button {
-  margin-top: 10px;
-  padding: 8px;
-  border: none;
-  background-color: #1890ff;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
+.card p {
+  margin: 5px 0;
+  text-align: center;
+}
 
+
+.card button {
+  background-color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.card .remove-button {
+  background-color: #ff0000;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.card .details-button {
+  background-color: #0099ff;
+  color: #fff;
+}
+
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 12px;
+  }
 }

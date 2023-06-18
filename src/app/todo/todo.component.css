@@ -9,7 +9,6 @@
   background-color: #f9efef;
   width: 1000px;
   height: 400px;
-  margin-right: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,21 +19,7 @@
   text-align: start;
   padding: 10px;
 }
-table {
-  position: relative;
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
-}
-table, th, td {
-  border: 2px solid black;
-  height: 30px;
-}
-th {
-  width: 400px;
-}
-th,td {
-  text-align: center;
-  color: black;
-}
+
 
 .input {
   width: 800px;
@@ -44,6 +29,7 @@ th,td {
   border: none;
   padding: 5px;
 }
+
 .input::placeholder {
   opacity: 70%;
 }
@@ -73,27 +59,168 @@ th,td {
   padding: 10px;
 }
 
-.checkbox {
-  font-family: 'Roboto', sans-serif;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
 }
-.remove {
-  border: none;
-  background-color: #1890ff;
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-content {
+  border-bottom: 2px solid #1890ff;
+  padding: 10px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #4CAF50;
   color: white;
-  width: 80px;
-  height: 25px;
-  cursor: pointer;
-  border-radius: 4px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
 }
-.remove:hover,
-.remove:active {
-  transform: scale(105%);
+
+.value {
+  position: relative;
 }
-.output {
+
+label {
   font-family: 'Roboto', sans-serif;
-  padding-left: 10px;
+  position: absolute;
+  right: 5%;
 }
+
 .input-list {
   position: absolute;
-  left: 420px;
+  right: 20%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 1240px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+  .branch-title {
+    font-size: 25px;
+  }
+
+  .to-do {
+    width: 890px;
+  }
+
+  .input {
+    width: 600px;
+    margin-right: 100px;
+  }
+
+  .button {
+    width: 120px;
+  }
+
+  .card {
+    width: 880px;
+  }
+
+  
+
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .branch-title {
+    font-size: 15px;
+  }
+
+  .to-do {
+    width: 690px;
+  }
+
+  .input {
+    width: 450px;
+  }
+
+  .button {
+    width: 100px;
+    font-size: 15px;
+  }
+
+ .card {
+  width: 680px;
+ }
+
+}
+
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .branch-title {
+    font-size: 15px;
+  }
+
+  .to-do {
+    width: 400px;
+  }
+
+  .input {
+    width: 250px;
+    margin-right: 10px;
+    height: 25px;
+  }
+
+  .button {
+    width: 100px;
+    font-size: 10px;
+  }
+  
+  .card {
+    width: 390px;
+    margin-top: 5px;
+  }
+
+  .input-list {
+    position: absolute;
+    top: -10px;
+  }
+
+  .card-content {
+    width: 370px;
+  }
+ 
 }
